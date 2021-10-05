@@ -2,9 +2,7 @@
 
 name: test pr label
 on:
-  pull_request_target:
-    types:
-      - labeled
+  pull_request:
 jobs:
   dump:
     runs-on: ubuntu-latest
