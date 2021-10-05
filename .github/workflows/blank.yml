@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: test pr label
+on:
+  pull_request_target:
+    types:
+      - labeled
+jobs:
+  pr-pull:
+    if: contains(github.event.pull_request.labels.*.name, 'pr-pull')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Homebrew
+        run: echo 'Hello!'
